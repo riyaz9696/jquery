@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Changing Website Styles</title>
+
+  <script src="jquery.min.js" type="text/javascript"></script>
+  <style type="text/css">
+   #circle{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: yellow;
+    margin: 10px;
+       }
+         
+  </style>
+</head>
+<body>
+<p id="circle"></p>
+<script type="text/javascript">
+  $("#circle").click(function(){
+    $(this).animate({
+      width:"400px",
+      height:"400",
+      marginLeft:"100px",
+      marginTop:"100px"
+    },2000,function(){
+      $(this).css("background-color","red");
+    });
+  });
+</script>
+</body>
+</html>
